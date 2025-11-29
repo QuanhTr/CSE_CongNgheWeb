@@ -1,0 +1,1 @@
+Câu hỏi của tôi là: Vì sao dùng Prepared Statement với execute([$ten]) lại an toàn hơn và có thể ngăn chặn SQL Injection?
