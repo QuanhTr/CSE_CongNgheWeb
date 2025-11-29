@@ -1,5 +1,4 @@
 <?php
-// === 1. KẾT NỐI PDO ===
 $host = '127.0.0.1';
 $dbname = 'cse485_web';
 $username = 'root';
@@ -13,7 +12,6 @@ try {
     die("Kết nối thất bại: " . $e->getMessage());
 }
 
-// === 2. XỬ LÝ FORM THÊM SINH VIÊN ===
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ten_sinh_vien'])) {
     $ten = $_POST['ten_sinh_vien'];
     $email = $_POST['email'];
@@ -22,12 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ten_sinh_vien'])) {
     $stmt = $pdo->prepare($sql_insert);
     $stmt->execute([$ten, $email]);
 
-    // Reload trang sau khi thêm
     header("Location: chapter4.php");
     exit;
 }
 
-// === 3. LẤY DANH SÁCH SINH VIÊN ===
 $sql_select = "SELECT * FROM sinhvien ORDER BY ngay_tao DESC";
 $stmt_select = $pdo->query($sql_select);
 ?>
