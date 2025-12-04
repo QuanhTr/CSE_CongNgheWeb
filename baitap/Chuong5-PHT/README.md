@@ -1,0 +1,2 @@
+Câu hỏi phản biện:
+Câu hỏi của tôi là: Nếu View chỉ là nơi hiển thị giao diện, vậy tại sao không cho View tự lấy dữ liệu từ database cho nhanh? Việc bắt buộc mọi thao tác với CSDL phải thông qua Model thì giúp ích gì cho chương trình?
